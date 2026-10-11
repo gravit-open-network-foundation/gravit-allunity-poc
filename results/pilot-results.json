@@ -1,0 +1,51 @@
+[
+  {
+    "scenario": "Payment verified by two independent operators",
+    "payment_id": "pay-001",
+    "execute": true,
+    "reason": "Verified Fact",
+    "decision_id": "0faf9218905b5a94"
+  },
+  {
+    "scenario": "Sybil: two keys of the same operator",
+    "payment_id": "pay-002",
+    "execute": false,
+    "reason": "verifier: DEGRADED (Probabilistic Assessment): claimed 'Verified Fact' not justified by evidence; capped at 'Probabilistic Assessment'",
+    "decision_id": "b49fb4f5a4b89061"
+  },
+  {
+    "scenario": "Tampered: amount changed after attestation",
+    "payment_id": "pay-003",
+    "execute": false,
+    "reason": "attestation not bound to this action: verifier-a:x402:pay-003, verifier-b:x402:pay-003",
+    "decision_id": null
+  },
+  {
+    "scenario": "Forged attestation from an unregistered key",
+    "payment_id": "pay-004",
+    "execute": false,
+    "reason": "verifier: DEGRADED (Probabilistic Assessment): CANON-SIG-011: signed evidence from independent operators does not converge; claimed 'Verified Fact' not justified by evidence; capped at 'Probabilistic Assessment'",
+    "decision_id": "c5d75dd599001d2c"
+  },
+  {
+    "scenario": "Policy: currency is not an AllUnity stablecoin",
+    "payment_id": "pay-005",
+    "execute": false,
+    "reason": "policy: currency 'USDT' is not an AllUnity stablecoin",
+    "decision_id": null
+  },
+  {
+    "scenario": "Stale attestations (older than 5 minutes)",
+    "payment_id": "pay-006",
+    "execute": false,
+    "reason": "verifier: DEGRADED (Probabilistic Assessment): CANON-FRS-005: evidence older than Freshness Bound; claimed 'Verified Fact' not justified by evidence; capped at 'Probabilistic Assessment'",
+    "decision_id": "7bb97710aa488f77"
+  },
+  {
+    "scenario": "High-impact payment, three independent operators",
+    "payment_id": "pay-007",
+    "execute": true,
+    "reason": "Verified Fact",
+    "decision_id": "60698adb52900174"
+  }
+]
