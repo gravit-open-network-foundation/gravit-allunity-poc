@@ -1,5 +1,5 @@
 """Gravit epistemic gate: lets an AI-agent action through only if the public
-Gravit Verifier (v0.5.0) classifies it as a Verified Fact, on signed evidence
+Gravit Verifier (v0.6.0) classifies it as a Verified Fact, on signed evidence
 from independent registered operators, bound to exactly this action."""
 
 from .gate import EpistemicGate, GateDecision, PolicyViolation

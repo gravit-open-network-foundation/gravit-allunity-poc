@@ -7,7 +7,7 @@ then the public Gravit Verifier on signed attestations from independent
 registered verifiers, each bound to exactly this payment.
 
 No connection to AllUnity systems: the x402 request and settlement are
-simulated. The verification itself is the real Gravit Verifier v0.5.0.
+simulated. The verification itself is the real Gravit Verifier v0.6.0.
 """
 
 from typing import Any, Dict, List, Optional
