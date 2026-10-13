@@ -4,14 +4,14 @@
     "payment_id": "pay-001",
     "execute": true,
     "reason": "Verified Fact",
-    "decision_id": "0faf9218905b5a94"
+    "decision_id": "ef0265b9ebcd2fb0"
   },
   {
     "scenario": "Sybil: two keys of the same operator",
     "payment_id": "pay-002",
     "execute": false,
     "reason": "verifier: DEGRADED (Probabilistic Assessment): claimed 'Verified Fact' not justified by evidence; capped at 'Probabilistic Assessment'",
-    "decision_id": "b49fb4f5a4b89061"
+    "decision_id": "fddee2fd564596dc"
   },
   {
     "scenario": "Tampered: amount changed after attestation",
@@ -25,7 +25,7 @@
     "payment_id": "pay-004",
     "execute": false,
     "reason": "verifier: DEGRADED (Probabilistic Assessment): CANON-SIG-011: signed evidence from independent operators does not converge; claimed 'Verified Fact' not justified by evidence; capped at 'Probabilistic Assessment'",
-    "decision_id": "c5d75dd599001d2c"
+    "decision_id": "437a0390c5c6a3fa"
   },
   {
     "scenario": "Policy: currency is not an AllUnity stablecoin",
@@ -39,13 +39,13 @@
     "payment_id": "pay-006",
     "execute": false,
     "reason": "verifier: DEGRADED (Probabilistic Assessment): CANON-FRS-005: evidence older than Freshness Bound; claimed 'Verified Fact' not justified by evidence; capped at 'Probabilistic Assessment'",
-    "decision_id": "7bb97710aa488f77"
+    "decision_id": "12afa8dd80d0ebed"
   },
   {
     "scenario": "High-impact payment, three independent operators",
     "payment_id": "pay-007",
     "execute": true,
     "reason": "Verified Fact",
-    "decision_id": "60698adb52900174"
+    "decision_id": "50478e57832cebff"
   }
 ]

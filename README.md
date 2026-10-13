@@ -8,7 +8,7 @@ An AI agent wants to pay. Before settlement the payment must pass a gate:
    No evidence can override them.
 2. **Binding** – every attestation is signed over the SHA3-256 hash of *exactly this* payment;
    change one field after signing and the attestation no longer counts.
-3. **The public [Gravit Verifier](https://github.com/gravit-open-network-foundation/verifier) v0.5.0**
+3. **The public [Gravit Verifier](https://github.com/gravit-open-network-foundation/verifier) v0.6.0**
    must classify the payment as a *Verified Fact*: signed attestations from at least two
    **independent** operators listed in a verifier registry that 3 of 5 root keys have signed;
    fresh (≤ 5 minutes); for payments from 10 000 with strong provenance (CANON-PRV-006).
@@ -21,7 +21,7 @@ entry, so history can be extended but not rewritten.
 ## Run it
 
 ```bash
-make setup PYTHON=python3.12   # Python ≥ 3.10; installs the verifier at tag v0.5.0
+make setup PYTHON=python3.12   # Python ≥ 3.10; installs the verifier at tag v0.6.0
 make run                       # 7 scenarios → results/
 make test
 ```
