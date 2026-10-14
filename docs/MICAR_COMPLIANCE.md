@@ -18,10 +18,17 @@ mapping has not been reviewed by BaFin, FINMA or legal counsel.
 
 Related, outside MiCA:
 
-- **EU AI Act, Art. 50 (transparency obligations, applicable since 2 August 2026):** when an AI
-  agent initiates a payment, the decision record carries the provenance of that instruction.
+- **EU AI Act, record keeping (Art. 12) and human oversight (Art. 14):** these obligations apply to
+  high-risk AI systems (for systems listed in Annex III from 2 December 2027). Where an AI agent that
+  initiates payments falls under them, a signed decision record with the provenance of each instruction
+  supports both. Whether a given agent is high-risk is for its provider and deployer to assess.
 - **DORA (Regulation (EU) 2022/2554):** verifiable logs of automated actions support ICT incident
   analysis.
+
+> **Correction (14 Oct 2026).** An earlier version of this list cited Art. 50 of the EU AI Act. Art. 50
+> sets transparency duties (telling people they interact with an AI system, labelling generated content);
+> it is not the provision relevant to payment records. The earlier text remains in the history of this
+> repository.
 
 What exists today is listed in the repository README (status section): a runnable gate on the
 public Gravit Verifier v0.5.0 with simulated x402 requests and test keys.
