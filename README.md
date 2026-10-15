@@ -44,6 +44,7 @@ so anyone can check that the published results come from this code.
 - **Is:** a runnable demonstration. The verification is the real, tested Gravit Verifier.
 - **Is not:** connected to AllUnity. x402 requests and settlement are simulated; there are no
   live transactions.
+- **Is not:** reviewed or endorsed by AllUnity. It was built by the Gravit Open Network Foundation from public information only.
 - **Keys:** `gravit_gate/testkeys.py` contains **test keys only**, derived from public seeds.
   A deployment uses the Foundation's registry signed by the root key holders.
 - `docs/` describes the intended partnership and compliance mapping; it is a plan and has not
