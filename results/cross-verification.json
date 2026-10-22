@@ -1,0 +1,66 @@
+[
+ {
+  "scenario": "Report confirmed by custodian bank and chain observer",
+  "report": "r-01",
+  "mint": 250000,
+  "outcome": "MINT",
+  "reason": "Verified Fact",
+  "verdicts": "custodian-bank=True, chain-observer=True"
+ },
+ {
+  "scenario": "Issuer overstates the balance at the bank",
+  "report": "r-02",
+  "mint": 250000,
+  "outcome": "BLOCK",
+  "reason": "verifier: DEGRADED (Probabilistic Assessment): CANON-RES-012: 1 record(s) report result=false: the claim is contradicted; claimed 'Verified Fact' not justified by evidence; capped at 'Probabilistic Assessment'",
+  "verdicts": "custodian-bank=False, chain-observer=True"
+ },
+ {
+  "scenario": "Issuer understates the supply on chain",
+  "report": "r-03",
+  "mint": 250000,
+  "outcome": "BLOCK",
+  "reason": "verifier: DEGRADED (Probabilistic Assessment): CANON-RES-012: 1 record(s) report result=false: the claim is contradicted; claimed 'Verified Fact' not justified by evidence; capped at 'Probabilistic Assessment'",
+  "verdicts": "custodian-bank=True, chain-observer=False"
+ },
+ {
+  "scenario": "Only the issuer confirms its own report",
+  "report": "r-04",
+  "mint": 250000,
+  "outcome": "BLOCK",
+  "reason": "policy: only the issuer confirmed its own report; that is not independent evidence",
+  "verdicts": "issuer=True"
+ },
+ {
+  "scenario": "Custodian bank offline: not evaluable",
+  "report": "r-05",
+  "mint": 250000,
+  "outcome": "BLOCK",
+  "reason": "verifier: DEGRADED (Probabilistic Assessment): claimed 'Verified Fact' not justified by evidence; capped at 'Probabilistic Assessment'",
+  "verdicts": "chain-observer=True"
+ },
+ {
+  "scenario": "Custodian statement is stale",
+  "report": "r-06",
+  "mint": 250000,
+  "outcome": "BLOCK",
+  "reason": "verifier: DEGRADED (Probabilistic Assessment): CANON-FRS-005: evidence older than Freshness Bound; claimed 'Verified Fact' not justified by evidence; capped at 'Probabilistic Assessment'",
+  "verdicts": "custodian-bank=True, chain-observer=True"
+ },
+ {
+  "scenario": "Mint larger than the reserve surplus",
+  "report": "r-07",
+  "mint": 900000,
+  "outcome": "BLOCK",
+  "reason": "policy: reserves 10,500,000.00 do not cover supply 10,000,000.00 + mint 900,000.00",
+  "verdicts": "custodian-bank=True, chain-observer=True"
+ },
+ {
+  "scenario": "Too few reserves held as bank deposits",
+  "report": "r-08",
+  "mint": 250000,
+  "outcome": "BLOCK",
+  "reason": "policy: deposits at credit institutions 29% below the MiCAR minimum 30%",
+  "verdicts": "custodian-bank=True, chain-observer=True"
+ }
+]
