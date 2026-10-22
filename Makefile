@@ -10,7 +10,10 @@ setup:
 run:
 	$(PY) -m pilot.run_pilot
 
+cross:
+	$(PY) -m cross_verification.run
+
 test:
 	$(PY) -m pytest -q
 
-.PHONY: setup run test
+.PHONY: setup run cross test
